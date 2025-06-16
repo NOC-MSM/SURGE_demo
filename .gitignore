@@ -1,2 +1,4 @@
 # Ignore NEMO v5.0.1 directory:
 nemo_5.0.1/
+# Ignore venv directories:
+venv_demo/
