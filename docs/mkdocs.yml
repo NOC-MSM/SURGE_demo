@@ -1,0 +1,82 @@
+site_name: NEMO SURGE Demonstrator
+site_url: https://noc-msm.github.io/nemo_surge_demo/
+
+repo_url: https://github.com/NOC-MSM/SURGE_demo
+repo_name: SURGE_demo
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  icon:
+    edit: material/pencil 
+    view: material/eye
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Raleway
+    code: IBM Plex Mono
+  features:
+    - content.action.edit
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+    - toc.integrate
+    - navigation.tabs
+    - navigation.expand
+    - navigation.footer
+    - search.suggest
+  palette:
+    # Dark Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+      primary: grey
+      accent: light blue
+    # Light Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+      primary: grey
+      accent: light blue
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - md_in_html
+  - pymdownx.blocks.caption
+
+nav:
+  - Home: index.md
+
+plugins:
+  - search
+  - glightbox
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/NOC-MSM/ValidOcean
+      name: GitHub
+
+copyright: Copyright &copy; 2025
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
