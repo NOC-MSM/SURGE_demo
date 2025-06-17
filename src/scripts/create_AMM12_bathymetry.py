@@ -12,12 +12,15 @@ import xarray as xr
 domain_fpath = "/dssgfs01/scratch/otooth/NEMO_Hackathon/SURGE_demo/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00/AMM_R12_sco_domcfg.nc"
 ds_domain = xr.open_dataset(domain_fpath)
 
+# Define masked bathymetry:
+bathy_meter = xr.where(ds_domain.top_level.squeeze() == 1, ds_domain.e3t_0.sum(dim='z'), 0)
+
 # -- Create bathymetry dataset -- #
 ds_bathy = xr.Dataset({
-    'Bathymetry': (['y', 'x'], ds_domain.e3t_0.isel(z=slice(15, 30)).sum(dim='z').data),
+    'Bathymetry': (['y', 'x'], bathy_meter.data),
     'nav_lat': (['y', 'x'], ds_domain.gphit.squeeze().data),
     'nav_lon': (['y', 'x'], ds_domain.glamt.squeeze().data)
 })
 
-output_fpath = "/dssgfs01/scratch/otooth/NEMO_Hackathon/SURGE_demo/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00/bathy_meter_AMM12.nc"
-ds_bathy.to_netcdf(output_fpath,unlimited_dims='time_counter')
+output_fpath = "bathy_meter_AMM12.nc"
+ds_bathy.to_netcdf(output_fpath, unlimited_dims='time_counter')
