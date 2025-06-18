@@ -29,3 +29,16 @@ NEMO v5.0.1 Hackathon Storm Surge Demonstrator using Shallow Water Equations
 * rn_max = 1 (smoothing parameter for sigma coords) - remove all smoothing since no stratification present in 1-layer.
 * rn_theta - 0.0 (applies stretching near surface) - removed as unnecessary.
 
+**Demonstrator Steps To Explain:**
+* Downloading NEMO + dependencies on local machine.
+* Downloading AMM12 reference cfg data from SETTE using wget.
+* Creating a bathy_meter.nc file from domain_cfg.nc.
+* Updating the DOMAINcfg tool for the 1 active layer case.
+* Generating new domain_cfg.nc and mesh_mask.nc files.
+* Creating constant T-S initial state for 1 active layer case.
+* Creating dummy surface heat and freshwater flux climatology files.
+* Creating idealised atmospheric forcing - Holland (1980) Extratropical Cyclone.
+* Modifications to the namelist_cfg for the 1 active layer case.
+* Variables to include / exclude from XIOS3 xml files.
+* Running AMM12_SURGE (local machine + HPC) for 5-day idealised case with tides.
+* Visualising the outputs - animation + tidal harmonics for validation.
