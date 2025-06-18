@@ -9,13 +9,14 @@
 import xarray as xr
 import os 
 
+# Define path to data directory:
 path_data = "/".join(os.getcwd().split('/')[:-2]) + "/data/"
 
 # -- Open domain_cfg file -- #
 domain_fpath = path_data + "AMM_R12_sco_domcfg.nc"
 ds_domain = xr.open_dataset(domain_fpath)
 
-# re-creates the tmask file from the bottom level array
+# Re-create tmask from the bottom level array:
 tmask = ds_domain.e3t_0 * 0
 for j in range(ds_domain.sizes["y"]):
     for i in range(ds_domain.sizes["x"]):
@@ -33,5 +34,5 @@ ds_bathy = xr.Dataset({
     'nav_lon': (['y', 'x'], ds_domain.glamt.squeeze().data)
 })
 
-output_fpath = path_data + "bathy_meter_AMM12.nc"
+output_fpath = f"{path_data}/bathy_meter_AMM12.nc"
 ds_bathy.to_netcdf(output_fpath, unlimited_dims='time_counter')
