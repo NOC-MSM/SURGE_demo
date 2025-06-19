@@ -64,6 +64,11 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Domain: domain.md
+  - Forcing: forcing.md
+  - Namelist: namelist.md
+  - Run: run.md
+  - Analysis: analysis.md
 
 plugins:
   - search
