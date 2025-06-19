@@ -6,7 +6,18 @@
 
 **Namelist**
 
-Below we discuss the important changes to the `namelist_cfg` required for the AMM12 1-layer barotropic storm surge model:
+Below we discuss the important changes to the `namelist_cfg` required for the AMM12 1-layer barotropic storm surge model.
+
+Two modified `namelist_cfg` files are available in the `SURGE_demo/namelists/nemo/` directory.
+
+Let's add links to these files in our run directory:
+
+```sh
+cd nemo_5.0.1/cfgs/AMM12_SURGE/EXP00/
+
+ln -s .../SURGE_demo/namelists/nemo/namelist_cdf_SURGE .
+ln -s .../SURGE_demo/namelists/nemo/namelist_cdf_SURGE_NO_TIDES .
+```
 
 **Temperature & Salinity (&namtsd)**
 
@@ -218,3 +229,9 @@ Generic Length Scale (GLS) scheme `ln_zdfgls = .false.`.
    nn_havtb    =    0         !  horizontal shape for avtb (=1) or not (=0)
 /
 ```
+
+!!! success
+
+    You have now modified the `namelist_cfg` file for the case of a 1-layer barotropic model.
+
+    Next, continue to the fifth tutorial **Running AMM12_SURGE :fast_forward:** to learn how to run a simulation both with and without tidal boundary forcing.
