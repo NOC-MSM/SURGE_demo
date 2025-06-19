@@ -32,14 +32,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
-      primary: grey
-      accent: light blue
-    # Light Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Light mode
-      primary: grey
+      primary: deep orange
       accent: light blue
 
 markdown_extensions:
