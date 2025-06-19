@@ -199,3 +199,22 @@ computing the surface pressure gradient (`ln_apr_dyn`).
    ln_hpg_sco  = .true.     !  s-coordinate (standard jacobian formulation)
 /
 ```
+
+**Vertical Physics (&namzdf)**
+
+* Do not compute the vertical eddy viscosity and diffusivity coefficients using the
+Generic Length Scale (GLS) scheme `ln_zdfgls = .false.`.
+
+```sh
+!-----------------------------------------------------------------------
+&namzdf        !   vertical physics                                     (default: NO selection)
+!-----------------------------------------------------------------------
+   ln_zdfgls   = .false.     !  Generic Length Scale closure              (T =>   fill namzdf_gls)
+   ln_zdfcst   = .true.      !  constant mixing
+   !                       ! coefficients
+   rn_avm0     =   0.1e-6     !  vertical eddy viscosity   [m2/s]       (background Kz if ln_zdfcst=F)
+   rn_avt0     =   0.1e-6     !  vertical eddy diffusivity [m2/s]       (background Kz if ln_zdfcst=F)
+   nn_avb      =    0         !  profile for background avt & avm (=1) or not (=0)
+   nn_havtb    =    0         !  horizontal shape for avtb (=1) or not (=0)
+/
+```
