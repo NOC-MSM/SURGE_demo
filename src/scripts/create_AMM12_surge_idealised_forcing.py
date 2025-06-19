@@ -11,6 +11,7 @@ import pandas as pd
 import xarray as xr
 import numpy as np
 from paratc.tc_models import Holland1980 as h80
+import os 
 
 def main(run_dir: str) -> None:
     """
@@ -46,7 +47,7 @@ def main(run_dir: str) -> None:
     # Update final longitude for storm to exit domain:
     lon[-1] = 14
 
-    # Define storm parameters:
+    # Define storm parameters:
     lat = np.repeat(50, len(lon))
     pcen = np.repeat(985, len(lon)) # Central pressure in hPa
     penv = np.repeat(1010, len(lon)) # Background pressure in hPa
@@ -138,7 +139,7 @@ def main(run_dir: str) -> None:
 # Entry point for the script:
 if __name__ == "__main__":
     # Define NEMO AMM12 SURGE run directory path:
-    run_dir = "/dssgfs01/scratch/otooth/NEMO_Hackathon/SURGE_demo/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00"
+    run_dir = "/".join(os.getcwd().split('/')[:-2]) + "/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00"
 
     # Create idealised atmospheric forcing files:
     main(run_dir=run_dir)
