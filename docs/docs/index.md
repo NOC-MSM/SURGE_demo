@@ -144,15 +144,49 @@ The DOMAINcfg tool is now compiled.
 
 We now need to download the ancillary files (topography, domain, boundary and atmospheric forcing) for the AMM12 reference configuration used for SETTE testing.
 
-In our `EXP00` run directory, let's download the tarball of input files:
+In our `EXP00` run directory, let's download and uncompress the tarball of input files:
 
 ```sh
 cd ../cfgs/AMM12_SURGE/EXP00/
 
 wget "https://gws-access.jasmin.ac.uk/public/nemo/sette_inputs/r5.0.0/AMM12_v5.0.0.tar.gz"
+
+tar -xvf AMM12_v5.0.0.tar.gz
+
+cd AMM12_v5.0.0
+
+mv * ..
+rm -rf AMM12_v5.0.0
 ```
 
-??? success
+### Creating a Python virtual environment:
+
+To run the Python scripts provided for the creation of bathymetry, initial conditions and idealised atmospheric forcing, we first need to create a virtual environment.
+
+!!! info Option 1: venv + pip
+
+    ```sh
+    python3 -m venv env_surge_demo
+
+    source env_surge_demo/bin/activate
+
+    pip install --upgrade pip
+    pip install -r requirements.txt
+
+    deactivate
+    ```
+
+!!! info Option 2: conda
+
+    ```sh
+    conda env create -f environment.yml
+
+    source "$(conda info --base)/etc/profile.d/conda.sh"
+
+    conda activate env_surge_demo
+    ```
+
+!!! success
 
     You have now compiled and downloaded all of the ingredients needed to create our `AMM12_SURGE` domain, initial conditions & forcing ancillary files.
 

@@ -24,6 +24,7 @@ theme:
     - toc.integrate
     - navigation.tabs
     - navigation.expand
+    - navigation.indexes
     - navigation.footer
     - search.suggest
   palette:
