@@ -8,7 +8,7 @@
 
 Before running the `DOMAINcfg` tool, we first need to create a file containing the bathymetry of the AMM12 reference configuration domain. 
 
-We do this by running the `create_AMM12_SURGE_bathymetry.py` Python script in the `/scripts` directory using conda as follows:
+We do this by running the `create_AMM12_SURGE_bathymetry.py` Python script in the `/scripts` directory using our `env_surge_demo` virtual environment as follows:
 
 ```sh
 conda activate env_surge_demo
@@ -18,7 +18,7 @@ cd SURGE_demo/src/scripts
 python3 create_AMM12_SURGE_bathymetry.py
 ```
 
-The script calculates the `Bathymetry` (m) using the `AMM_R12_sco_domcfg.nc` stored in the `AMM12_SURGE/EXP00` run directory and writes this to a new file `bathy_meter_AMM12.nc` in the same directory.
+The script calculates the `Bathymetry` (m) using the `AMM_R12_sco_domcfg.nc` stored in the `AMM12_SURGE/EXP00` run directory and writes this to a new file `bathy_meter_AMM12.nc` in this directory.
 
 **DOMAINcfg Input File Preparation**
 
