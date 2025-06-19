@@ -1,4 +1,4 @@
-# **Welcome to the NEMO SURGE Demonstrator**
+# **Welcome to the NEMO SURGE Demonstrator :wave:**
 
 **Description**
 

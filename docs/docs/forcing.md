@@ -1,10 +1,11 @@
-# **Atmospheric Forcing Creation**
+# **Atmospheric Forcing Creation :cyclone:**
 
 !!! abstract
 
     In this third tutorial of the NEMO SURGE demonstrator, we cover the creation of synthetic atmospheric forcing and initial conditions for the `AMM12_SURGE` configuration.
 
 **Initial Conditions Preparation**
+
 We initialised the 1-layer `AMM12_SURGE` configuration from the constant reference temperature (T = 10$^{\circ}$C) and salinity (S = 35 PSU) values included in the simplified Equation of State in NEMO.
 
 To generate the file containing the initial temperature and salinity fields, we run the `create_AMM12_SURGE_init_state.py` Python script using our `env_surge_demo` virtual environment:

@@ -1,4 +1,4 @@
-# **Domain Creation**
+# **Domain Creation :globe_with_meridians:**
 
 !!! abstract
 
