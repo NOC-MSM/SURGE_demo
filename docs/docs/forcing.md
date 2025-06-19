@@ -54,6 +54,12 @@ The script generates separate daily files containing 1-hourly forcing data for z
 | `vtau`      | amm12_surge_utau_y2012m01d{01-05}.nc  |
 | `somslpre`      | amm12_surge_somslpre_y2012m01d{01-05}.nc  |
 
+!!! success
+
+    You have now created the intial conditions and atmospheric forcing files for the `AMM12_SURGE` configuration.
+
+    Next, continue to the fourth tutorial **Namelists Modifications :material-file-code:** to learn how to modify the `namelist_cfg` file for a 1-layer barotropic model.
+
 ---
 **References**
 

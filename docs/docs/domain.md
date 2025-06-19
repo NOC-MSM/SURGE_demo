@@ -56,3 +56,9 @@ cd ..
 ln -s DOMAIN_AMM12_SURGE/domain_cfg.nc AMM12_SURGE_domcfg.nc
 ln -s DOMAIN_AMM12_SURGE/mesh_mask.nc AMM12_SURGE_mesh_mask.nc
 ```
+
+!!! success
+
+    You have now created the `domain_cfg.nc` file for our 1-layer barotropic `AMM12_SURGE` configuration.
+
+    Next, continue to the third tutorial **Atmospheric Forcing Creation :cyclone:** to generate idealised atmospheric forcing using a synthetic storm system.

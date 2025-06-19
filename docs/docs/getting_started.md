@@ -158,4 +158,4 @@ To run the Python scripts provided for the creation of bathymetry, initial condi
 
     You have now compiled and downloaded all of the ingredients needed to create our `AMM12_SURGE` domain, initial conditions & forcing ancillary files.
 
-    Next, continue to the **Domain** page to create the domain_cfg.nc file for our 1-layer model.**
+    Next, continue to the second tutorial **Domain Creation :globe_with_meridians:** to create the `domain_cfg.nc` file for our 1-layer model.
