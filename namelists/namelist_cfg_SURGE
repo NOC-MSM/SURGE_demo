@@ -276,7 +276,8 @@
 !-----------------------------------------------------------------------
 &namtra_ldf    !   lateral diffusion scheme for tracers                 (default: NO selection)
 !-----------------------------------------------------------------------
-   ln_traldf_lap   =  .true.   !    laplacian operator
+   ln_traldf_OFF   =  .true.   !  No explicit diffusion
+   ln_traldf_lap   =  .false.   !    laplacian operator
    ln_traldf_hor   =  .true.   !  horizontal (geopotential)
    !                       !  Coefficients:
    nn_aht_ijk_t    = 0         !  =  0   constant = 1/2  Ud*Ld   (lap case) 
@@ -349,7 +350,8 @@
 !-----------------------------------------------------------------------
 &namzdf        !   vertical physics                                     (default: NO selection)
 !-----------------------------------------------------------------------
-   ln_zdfgls   = .true.    !  Generic Length Scale closure              (T =>   fill namzdf_gls)
+   ln_zdfgls   = .false.     !  Generic Length Scale closure              (T =>   fill namzdf_gls)
+   ln_zdfcst   = .true.      !  constant mixing
    !                       ! coefficients
    rn_avm0     =   0.1e-6     !  vertical eddy viscosity   [m2/s]       (background Kz if ln_zdfcst=F)
    rn_avt0     =   0.1e-6     !  vertical eddy diffusivity [m2/s]       (background Kz if ln_zdfcst=F)
