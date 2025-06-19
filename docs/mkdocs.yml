@@ -58,6 +58,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Getting Started: getting_started.md
   - Domain: domain.md
   - Forcing: forcing.md
   - Namelist: namelist.md
