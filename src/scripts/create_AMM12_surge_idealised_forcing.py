@@ -42,7 +42,6 @@ def main(run_dir: str) -> None:
     dx_dt = 33/120
     lon_start = (((ds_domain.nav_lon.isel(y=50, x=0) + 180) % 360) - 180).values
     lon = lon_start + (np.arange(120) * dx_dt)
-    lon = lon % 360
     # Update final longitude for storm to exit domain:
     lon[-1] = 14
 
