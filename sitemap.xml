@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/domain/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/forcing/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/getting_started/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/namelist/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/outputs/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://noc-msm.github.io/nemo_surge_demo/run/</loc>
+         <lastmod>2025-06-20</lastmod>
+    </url>
+</urlset>
