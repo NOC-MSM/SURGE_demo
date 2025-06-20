@@ -24,7 +24,7 @@ git clone --branch 5.0.1 https://forge.nemo-ocean.eu/nemo/nemo.git nemo_5.0.1
 
 ??? tip "Helpful Tip..."
 
-    To automate the installation of NEMO and its dependencies (e.g., XIOS3, NETCDF, HDF5) on your local machine, we have provided a shell script in the `tools` directory. 
+    To automate the installation of NEMO and its dependencies (e.g., XIOS2/3, NETCDF, HDF5) on your local machine, we have provided a shell script in the `tools` directory. 
 
 ### Compiling NEMO
 
