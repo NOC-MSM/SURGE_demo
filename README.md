@@ -45,11 +45,11 @@ which depends on your compiler)
 
 If you need to install any of the software above, we have provided an installation script in the `tools/` directory.
 
-## **Provided Resources**
+## **Resources Provided**
 
-* Topography, coordinates, boundary conditions for the AMM12 reference configuration.
-* Python scripts to create idealised atmospheric forcing, initial conditions and 1-layer domain bathymetry.
-* Namelist to build the 1-layer domain_cfg.nc file from the bathymetry and coordinates file.
-* Namelist for AMM12_SURGE configuration.
+* Topography, coordinates, boundary conditions for the AMM12 reference configuration (`data/`).
+* Python scripts to create idealised atmospheric forcing, initial conditions and 1-layer domain bathymetry (`src/scripts`).
+* Namelist to build the 1-layer domain_cfg.nc file from the bathymetry and coordinates file (`namelists/domain`).
+* Namelist for AMM12_SURGE configuration (`namelists/nemo`).
 
 > **Get started with our [documentation...](https://noc-msm.github.io/SURGE_demo)** 
