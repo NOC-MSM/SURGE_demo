@@ -8,7 +8,7 @@
 
 Before running the `DOMAINcfg` tool, we first need to create a file containing the bathymetry of the AMM12 reference configuration domain. 
 
-We do this by running the `create_AMM12_SURGE_bathymetry.py` Python script in the `/scripts` directory using our `env_surge_demo` virtual environment as follows:
+We do this by running the `create_AMM12_SURGE_bathymetry.py` Python script in the `src/scripts/` directory using our `env_surge_demo` virtual environment as follows:
 
 ```sh
 conda activate env_surge_demo
@@ -27,7 +27,7 @@ Next we need to prepare the namelists and input files for the `DOMAINcfg` tool.
 We start by creating a `DOMAIN_AMM12_SURGE` directory in our `AMM12_SURGE/EXP00` run directory and adding a link to our newly created bathymetry input file:
 
 ```sh
-cd ../../nemo_5.0.1/cfgs/AMM12_SURGE
+cd .../SURGE_demo/nemo_5.0.1/cfgs/AMM12_SURGE
 mkdir DOMAIN_AMM12_SURGE
 
 cd DOMAIN_AMM12_SURGE
@@ -53,8 +53,8 @@ This will produce `domain_cfg.nc` and `mesh_mask.nc` files in the current direct
 ```sh
 cd ..
 
-ln -s DOMAIN_AMM12_SURGE/domain_cfg.nc AMM12_SURGE_domcfg.nc
-ln -s DOMAIN_AMM12_SURGE/mesh_mask.nc AMM12_SURGE_mesh_mask.nc
+ln -s DOMAIN_AMM12_SURGE/domain_cfg.nc AMM12_SURGE_domcfg.nc .
+ln -s DOMAIN_AMM12_SURGE/mesh_mask.nc AMM12_SURGE_mesh_mask.nc .
 ```
 
 !!! success
