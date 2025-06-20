@@ -136,7 +136,7 @@ def main(run_dir: str) -> None:
     for n, f in enumerate(fnames):
         # Construct dataset from synthetic storm data:
         if n < 5:
-            somslpre = storm.data.isel(time=slice(0, 24)).pressure.data * 0.0  # Set to 0 Pa for first 5 days.
+            somslpre = 101000 + (storm.data.isel(time=slice(0, 24)).pressure.data * 0.0)  # Set to 1010 hPa for first 5 days.
         else:
             # Calulate sea-level pressure from storm data:
             somslpre = storm.data.isel(time=slice((n - 5)*24, (n - 5)*24 + 24)).pressure.data * 100  # Convert hPa to Pa
