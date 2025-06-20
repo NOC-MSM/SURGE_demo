@@ -342,7 +342,7 @@ if __name__ == '__main__':
     
     # FIRST EXAMPLE: for the SSH:
     if example == 0:
-        data_dir = f"{'/'.join(os.getcwd().split('/')[:-2])}/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00"
+        data_dir = f"{'/'.join(os.getcwd().split('/')[:-2])}/nemo_5.0.1/cfgs/AMM12_SURGE/EXP00/"
         data_file = "AMM12_SURGE_1h_20120101_20120109_grid_T.nc"
         ds = xr.load_dataset(data_dir + data_file)
         time_var = "time_counter"
