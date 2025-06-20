@@ -65,7 +65,7 @@ cd  nemo_5.0.1
 
 ??? tip "Helpful Tip..."
 
-    To use XIOS3, we must first update the list of active CPP keys in the `AMM12` reference configuration `.../SURGE_demo/nemo_5.0.1/cfgs/AMM12/cpp_AMM12.fcm` file to include the `key_xios3` key in place of `key_xios`. Otherwise, we will encounter an error during compilation.
+    To use XIOS3, we must first update the list of active CPP keys in the `AMM12` reference configuration `.../SURGE_demo/nemo_5.0.1/cfgs/AMM12/cpp_AMM12.fcm` file to include the `key_xios3` key in addition to `key_xios`. Otherwise, we will encounter an error during compilation.
 
 In the example above, we use the `arch/NOC/arch-Anemone-ifort-xios3.fcm` file.
 
