@@ -36,7 +36,7 @@ The key parameters for the synthetic storm track are as follows:
 | `translation_speed`      | 6.6 [degrees E / day]  |
 | `central_pressure`      | 985 [hPa]  |
 | `ambient_pressure`      | 1010 [hPa]  |
-| `radius_max_winds`      | 50 [km]  |
+| `radius_max_winds`      | 60 [km]  |
 
 To calculate the zonal and meridional wind stress from the synthetic wind field, we use the Large and Pond (1982) formulation.
 
