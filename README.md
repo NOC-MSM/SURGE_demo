@@ -1,44 +1,53 @@
-# SURGE_demo
-NEMO v5.0.1 Hackathon Storm Surge Demonstrator using Shallow Water Equations
+<br />
+<p align="center">
+  </a>
+  <h1 align="center">NEMO SURGE Demonstrator</h1>
 
-## Plan:
+  <p align="center">
+    <strong>Create a regional 1-layer storm surge model using NEMO version 5.0.1<strong>
+    </a>
+    <br />
+    <br />
+    ·
+    <a href="https://noc-msm.github.io/SURGE_demo"><strong>Documentation</strong></a>
+    ·
+    <a href="https://github.com/NOC-MSM/SURGE_demo/issues"><strong>Report an Issue</strong></a>
+    ·
+  </p>
+</p>
 
-* Create demonstrator for existing Shallow Water Gyre test configuration.
-* Introduce atmospheric pressure term to the SWE code.
-* Create idealised Tropical Cyclone forcing (analytical winds & atmospheric pressure).
-* Tidal boundary conditions / bathymetry.
+## **Description:**
 
-## Namelist Modifications To Do:
+This NEMO version 5.0.1 demonstrator shows how to create a 1-layer baroptropic storm surge model using the AMM12 regional configuration.
 
-* Initialisation from rest & T-S.
-* [ ] Remove all forcing, except wind and atm. pressure -> use AMM7_surge SBC?
-* [ ] Remove runoff and SSR.
-* [ ] Remove CHL nn_chldta
-* [ ] Tides: check boundary forcing for 1-layer, only tidal harmonics at bdy, rest initialised to initial state.
-* [ ] Simplified EOS.
-* [ ] Diagnostics outputs to be checked.
+The instructions can be adapted to any region of the ocean by changing the bathymetry, coordinates, initial conditions and forcing files.
 
-**AMM12 SURGE Model: namelist_cfg**
-* Modified horizontal pressure gradient to ln_hpg_sco = .true. (s-coord standard Jacobian formulation)
-* Modified bottom friction to ln_non_lin = .true. (non-linear bottom drag coefficient)
-* T-S ensure initialised from the same temperature and salinity as the ln_seos reference values (see NEMO v5 manual)
+![Animation of idealised storm surge output by the AMM12_SURGE configuration without tides.](./docs/docs/assets/AMM12_SURGE_SSH_no_logo.gif)
 
-**Domain Configuration: namelist_cfg**
-* Use Jerome Chanut April 2022 (Emulating barotropic model) modification on Line 1484-1485 to set bottom_level = 1 (only 1 active level). 
-* Use Song & Haidvogel (1994) hybrid S-sigma coordinate.
-* rn_max = 1 (smoothing parameter for sigma coords) - remove all smoothing since no stratification present in 1-layer.
-* rn_theta - 0.0 (applies stretching near surface) - removed as unnecessary.
+## **Background**
 
-**Demonstrator Steps To Explain:**
-* Downloading NEMO + dependencies on local machine.
-* Downloading AMM12 reference cfg data from SETTE using wget.
-* Creating a bathy_meter.nc file from domain_cfg.nc.
-* Updating the DOMAINcfg tool for the 1 active layer case.
-* Generating new domain_cfg.nc and mesh_mask.nc files.
-* Creating constant T-S initial state for 1 active layer case.
-* Creating dummy surface heat and freshwater flux climatology files.
-* Creating idealised atmospheric forcing - Holland (1980) Extratropical Cyclone.
-* Modifications to the namelist_cfg for the 1 active layer case.
-* Variables to include / exclude from XIOS3 xml files.
-* Running AMM12_SURGE (local machine + HPC) for 5-day idealised case with tides.
-* Visualising the outputs - animation + tidal harmonics for validation.
+The coastlines of the United Kingdom are increasingly vulnerable to the impacts of storm surges driven by extreme weather events and rising sea levels. Accurate and efficient regional storm surge simulations are essential for early warning systems, risk assessment, and coastal planning.
+
+Single-layer, barotropic storm surge models offer a simplified yet robust framework for simulating sea level responses to atmospheric forcing, such as wind, and sea level pressure and tides, without the added complexity of 3-dimensional processes.
+
+This demonstrator adapts the AMM12 reference configuration covering the Northwest European Shelf. The AMM12 regional domain uses a regular lat-lon grid at approximately 12km horizontal resolution and S-coordinates in the vertical rather than z-coordinates. In addition to atmospheric forcing, our adapted AMM12_SURGE configuration is forced with tidal lateral boundary conditions using a flather boundary condition.
+
+## **System Prerequisites**
+
+We expect the following software to be installed on your local machine or HPC: 
+* NETCDF
+* XIOS3
+* An arch file for your HPC (this just sets paths to XIOS, netcdf and the compiling option
+which depends on your compiler)
+* Python (for the creation of forcing files and analysis of outputs)
+
+If you need to install any of the software above, we have provided an installation script in the `tools/` directory.
+
+## **Provided Resources**
+
+* Topography, coordinates, boundary conditions for the AMM12 reference configuration.
+* Python scripts to create idealised atmospheric forcing, initial conditions and 1-layer domain bathymetry.
+* Namelist to build the 1-layer domain_cfg.nc file from the bathymetry and coordinates file.
+* Namelist for AMM12_SURGE configuration.
+
+> **Get started with our [documentation...](https://noc-msm.github.io/SURGE_demo)** 
