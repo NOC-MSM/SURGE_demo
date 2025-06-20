@@ -13,19 +13,19 @@ To produce the animations below, we have prodvided the `create_gifs_outputs_fina
 ```sh
 conda activate env_surge_demo
 
-cd SURGE_demo/src/scripts
+cd .../SURGE_demo/src/scripts
 
 python3 create_gifs_output_final.py
 ```
 
-![Atmospheric Pressure:](./assets/AMM12_SURGE_atmpr.gif){ align=center }
-/// caption
-Atmospheric Pressure
-///
-
 ![Tidal Forcing:](./assets/AMM12_SURGE_SSH_tides.gif){ align=center }
 /// caption
 Tidal Forcing
+///
+
+![Atmospheric Pressure:](./assets/AMM12_SURGE_atmpr.gif){ align=center }
+/// caption
+Atmospheric Pressure
 ///
 
 ![Winds + Atm. Pressure:](./assets/AMM12_SURGE_SSH.gif){ align=center }
