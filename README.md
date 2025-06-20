@@ -22,7 +22,9 @@ This NEMO version 5.0.1 demonstrator shows how to create a 1-layer baroptropic s
 
 The instructions can be adapted to any region of the ocean by changing the bathymetry, coordinates, initial conditions and forcing files.
 
-![Animation of idealised storm surge output by the AMM12_SURGE configuration without tides.](./docs/docs/assets/AMM12_SURGE_SSH_no_logo.gif)
+<p align="center">
+    <a href="url"><img src="./docs/docs/assets/AMM12_SURGE_SSH_no_logo.gif" align="center" height="170" width="200" ></a>
+</p>
 
 ## **Background**
 
