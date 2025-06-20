@@ -63,7 +63,7 @@ nav:
   - Forcing: forcing.md
   - Namelist: namelist.md
   - Run: run.md
-  - Analysis: analysis.md
+  - Outputs: outputs.md
 
 plugins:
   - search
